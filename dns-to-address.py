@@ -45,10 +45,10 @@ class myHandler(BaseHTTPRequestHandler):
         return
 
 try:
-	server = HTTPServer(('', PORT_NUMBER), myHandler)
-	print 'Started httpserver on port ' , PORT_NUMBER
-	server.serve_forever()
+    server = HTTPServer(('', PORT_NUMBER), myHandler)
+    print 'Started httpserver on port ' , PORT_NUMBER
+    server.serve_forever()
 
 except KeyboardInterrupt:
-	print '^C received, shut it down!'
-	server.socket.close()
+    print '^C received, shut it down!'
+    server.socket.close()
