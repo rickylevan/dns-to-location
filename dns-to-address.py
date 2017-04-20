@@ -8,9 +8,9 @@ from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 google_map_magic = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='
 
 
-def host_to_addr(hostna):
+def host_to_addr(hostname):
     try:
-        ip = socket.gethostbyname(hostna)
+        ip = socket.gethostbyname(hostname)
         match = geolite2.lookup(ip)
         if match is None:
             return "No match found for: " + ip
